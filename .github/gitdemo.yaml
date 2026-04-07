@@ -1,0 +1,16 @@
+name: Demo pipeline 
+
+on:
+  push:
+     branch:
+
+jobs:
+  demo123:
+      runs-on: [self-hosted,Linux]
+
+      steps:
+        name: checkout code
+        user: action/checkout@v6
+
+        name: print some statement
+        run: echo "Runner working successfully"
